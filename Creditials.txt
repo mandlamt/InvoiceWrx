@@ -1,0 +1,14 @@
+------------ PRODUCTION --------
+SERVER: 172.20.58.47
+USERNAME: sftpFleetActive
+PASSWORD: Q8inEniR
+FOLDER: /Shoprite/out
+
+pscp -P 22 -pw Q8inEniR -sftp %finalfile% sftpFleetActive@172.20.58.47:/macrocom/out
+
+----------- TESTING -----------
+
+$host = "172.20.58.48";
+$user = "sftpFleetActive";
+$pass = "KB38GYu7";
+$dir = "/Shoprite/out";
