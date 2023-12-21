@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Miles Version Info:	2022.2 128678T
+	Export database URL:	jdbc:sqlserver://wbsasql2016.sofico.com.au:1433;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=15;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=WBSACFGM3;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;
+	Database Version Info:	Microsoft SQL Server 13
+	Export database schema:	WBSACFGM3
+	Export database:	WBSASQL2016.SOFICO.COM.AU
+	Export timestamp:	12/4/23 5:53 PM
+-->
+<config-export version="2.1" checksum="B13CE86D34FF5E875C751A4049F28E0831D5BDC37B4BC411EF8E2F9516C06A5B">
+  <export-info>
+    <configuration>0</configuration>
+    <config-object-ids>501256|501260|501263</config-object-ids>
+  </export-info>
+  <config-object name="selection">
+    <config-id id="501256">
+      <recordset table="selection" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selection WHERE SELECTION_ID = '501256'</select>
+        <delete>DELETE FROM selection WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject pk="501256" linkTable="0" objectId="93">
+          <DOCUMENTATION attId="13659" />
+          <TASK attId="12127" />
+          <SELECTION_ID attId="317">{pk}</SELECTION_ID>
+          <TYPE_ENUMID attId="2141">2223</TYPE_ENUMID>
+          <SINCE attId="12126" />
+          <DESCRIPTION_MLID />
+          <SYSREPOBJECT_ID linkId="170">86</SYSREPOBJECT_ID>
+          <CLASSNAME attId="2242" />
+          <PARENT_ID linkId="896" />
+          <USEDISTINCT attId="2139">1</USEDISTINCT>
+          <PERSISTENCYTYPE attId="12634" />
+          <USERACCOUNT_ID linkId="171">500015</USERACCOUNT_ID>
+          <SYSTEMSELECTION attId="10187">0</SYSTEMSELECTION>
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="318">Find contracts for revision calculation - Monthly - 1st month backdated</DESCRIPTION>
+          <SPECIFIC attId="12129" />
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <SESSION_ID />
+          <USEOUTER attId="2140">1</USEOUTER>
+          <DEFAULTSELECTION attId="10186">0</DEFAULTSELECTION>
+          <SQLQUERY attId="2243">Find_contracts_for_revision_calculation_Monthly_backdated.xml</SQLQUERY>
+          <HISTORY attId="12128" />
+        </serializedObject>
+      </recordset>
+      <recordset table="conditionitem" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT CONDITIONITEM_ID FROM conditionitem WHERE SELECTION_ID IN ('501256')</select>
+        <delete>DELETE FROM conditionitem WHERE CONDITIONITEM_ID = {pk}</delete>
+        <serializedObject pk="505629" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">566|2664</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">contractState</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.953</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">1</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505630" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">500001|500002</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Product.ID</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.-364.519</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">2</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505631" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">72</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseService.periodDuration:Unit</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.636:1</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">3</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505632" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">500147</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseService.InterestSetting</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.500041</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">4</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505633" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">0</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseServiceComponents.Precomputed</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.361.12836</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">5</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505634" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">1720</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">isBillableEnumID</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.3117</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">6</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505635" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">2930</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">RentalProfile.rentalCategory</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.361.-359.783</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">7</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505637" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-1M=21D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">95</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1528</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">8</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505638" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE+1D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">94</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1528</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">9</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505639" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">566</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionState</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1529</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">10</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505640" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-3M=1D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">startDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">95</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.298</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">11</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505641" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-1M=31D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">startDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">94</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.298</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">12</SEQUENCENR>
+        </serializedObject>
+      </recordset>
+      <recordset table="displayitem" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT DISPLAYITEM_ID FROM displayitem WHERE SELECTION_ID IN ('501256')</select>
+        <delete>DELETE FROM displayitem WHERE DISPLAYITEM_ID = {pk}</delete>
+        <serializedObject pk="505933" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142">1191</ORDERBY_ENUMID>
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">ID</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.296</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">1</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="505934" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142">1191</ORDERBY_ENUMID>
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">LeaseService.ID</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.466:50002.477.393.624</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">2</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="656221" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142" />
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">Next Bill End Date</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.500341</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">4</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="656474" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142" />
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501256}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">Calculation date</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:32.270</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.937</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">3</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+      </recordset>
+      <recordset table="selectionuseraccountrole" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selectionuseraccountrole WHERE SELECTION_ID IN ('501256')</select>
+        <delete>DELETE FROM selectionuseraccountrole WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="SELECTION_ID" />
+      </recordset>
+      <recordset table="selectionsysreprelation" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selectionsysreprelation WHERE SELECTION_ID IN ('501256')</select>
+        <delete>DELETE FROM selectionsysreprelation WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="SELECTION_ID" />
+      </recordset>
+      <recordset table="selectionusage" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTIONUSAGE_ID FROM selectionusage WHERE SELECTION_ID IN (501256) AND USERACCOUNT_ID IS NULL</select>
+        <delete>DELETE FROM selectionusage WHERE SELECTIONUSAGE_ID = {pk}</delete>
+        <serializedObject linkTable="0" objectId="816" />
+      </recordset>
+    </config-id>
+  </config-object>
+  <config-object name="selection">
+    <config-id id="501260">
+      <recordset table="selection" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selection WHERE SELECTION_ID = '501260'</select>
+        <delete>DELETE FROM selection WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject pk="501260" linkTable="0" objectId="93">
+          <DOCUMENTATION attId="13659" />
+          <TASK attId="12127" />
+          <SELECTION_ID attId="317">{pk}</SELECTION_ID>
+          <TYPE_ENUMID attId="2141">2223</TYPE_ENUMID>
+          <SINCE attId="12126" />
+          <DESCRIPTION_MLID />
+          <SYSREPOBJECT_ID linkId="170">86</SYSREPOBJECT_ID>
+          <CLASSNAME attId="2242" />
+          <PARENT_ID linkId="896" />
+          <USEDISTINCT attId="2139">1</USEDISTINCT>
+          <PERSISTENCYTYPE attId="12634" />
+          <USERACCOUNT_ID linkId="171">500015</USERACCOUNT_ID>
+          <SYSTEMSELECTION attId="10187">0</SYSTEMSELECTION>
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="318">Find contracts for revision calculation - Monthly - 2nd month backdated</DESCRIPTION>
+          <SPECIFIC attId="12129" />
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <SESSION_ID />
+          <USEOUTER attId="2140">1</USEOUTER>
+          <DEFAULTSELECTION attId="10186">0</DEFAULTSELECTION>
+          <SQLQUERY attId="2243">Find_contracts_for_revision_calculation_Monthly_backdated.xml</SQLQUERY>
+          <HISTORY attId="12128" />
+        </serializedObject>
+      </recordset>
+      <recordset table="conditionitem" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT CONDITIONITEM_ID FROM conditionitem WHERE SELECTION_ID IN ('501260')</select>
+        <delete>DELETE FROM conditionitem WHERE CONDITIONITEM_ID = {pk}</delete>
+        <serializedObject pk="505682" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">566|2664</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">contractState</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.953</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">1</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505683" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">500001|500002</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Product.ID</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.-364.519</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">2</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505684" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">72</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseService.periodDuration:Unit</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.636:1</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">3</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505685" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">500147</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseService.InterestSetting</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.500041</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">4</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505686" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">0</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseServiceComponents.Precomputed</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.361.12836</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">5</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505687" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">1720</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">isBillableEnumID</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.3117</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">6</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505688" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">2930</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">RentalProfile.rentalCategory</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.361.-359.783</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">7</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505690" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-1M=21D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">95</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1528</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">8</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505691" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE+1D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">94</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1528</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">9</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505692" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">566</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionState</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1529</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">10</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505693" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-3M=1D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">startDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">95</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.298</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">11</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505694" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-2M=31D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">startDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">94</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.298</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">12</SEQUENCENR>
+        </serializedObject>
+      </recordset>
+      <recordset table="displayitem" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT DISPLAYITEM_ID FROM displayitem WHERE SELECTION_ID IN ('501260')</select>
+        <delete>DELETE FROM displayitem WHERE DISPLAYITEM_ID = {pk}</delete>
+        <serializedObject pk="505943" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142">1191</ORDERBY_ENUMID>
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">ID</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.296</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">1</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="505944" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142">1191</ORDERBY_ENUMID>
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">LeaseService.ID</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.466:50002.477.393.624</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">2</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="656222" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142" />
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">Next Bill End Date</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.500341</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">4</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="656475" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142" />
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501260}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">Calculation date</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 17:48:46.536</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.937</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">3</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+      </recordset>
+      <recordset table="selectionuseraccountrole" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selectionuseraccountrole WHERE SELECTION_ID IN ('501260')</select>
+        <delete>DELETE FROM selectionuseraccountrole WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="SELECTION_ID" />
+      </recordset>
+      <recordset table="selectionsysreprelation" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selectionsysreprelation WHERE SELECTION_ID IN ('501260')</select>
+        <delete>DELETE FROM selectionsysreprelation WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="SELECTION_ID" />
+      </recordset>
+      <recordset table="selectionusage" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTIONUSAGE_ID FROM selectionusage WHERE SELECTION_ID IN (501260) AND USERACCOUNT_ID IS NULL</select>
+        <delete>DELETE FROM selectionusage WHERE SELECTIONUSAGE_ID = {pk}</delete>
+        <serializedObject linkTable="0" objectId="816" />
+      </recordset>
+    </config-id>
+  </config-object>
+  <config-object name="selection">
+    <config-id id="501263">
+      <recordset table="selection" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selection WHERE SELECTION_ID = '501263'</select>
+        <delete>DELETE FROM selection WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject pk="501263" linkTable="0" objectId="93">
+          <DOCUMENTATION attId="13659" />
+          <TASK attId="12127" />
+          <SELECTION_ID attId="317">{pk}</SELECTION_ID>
+          <TYPE_ENUMID attId="2141">2223</TYPE_ENUMID>
+          <SINCE attId="12126" />
+          <DESCRIPTION_MLID />
+          <SYSREPOBJECT_ID linkId="170">86</SYSREPOBJECT_ID>
+          <CLASSNAME attId="2242" />
+          <PARENT_ID linkId="896" />
+          <USEDISTINCT attId="2139">1</USEDISTINCT>
+          <PERSISTENCYTYPE attId="12634" />
+          <USERACCOUNT_ID linkId="171">500015</USERACCOUNT_ID>
+          <SYSTEMSELECTION attId="10187">0</SYSTEMSELECTION>
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="318">Find contracts for revision calculation - Monthly - 3rd month backdated</DESCRIPTION>
+          <SPECIFIC attId="12129" />
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <SESSION_ID />
+          <USEOUTER attId="2140">1</USEOUTER>
+          <DEFAULTSELECTION attId="10186">0</DEFAULTSELECTION>
+          <SQLQUERY attId="2243">Find_contracts_for_revision_calculation_Monthly_backdated.xml</SQLQUERY>
+          <HISTORY attId="12128" />
+        </serializedObject>
+      </recordset>
+      <recordset table="conditionitem" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT CONDITIONITEM_ID FROM conditionitem WHERE SELECTION_ID IN ('501263')</select>
+        <delete>DELETE FROM conditionitem WHERE CONDITIONITEM_ID = {pk}</delete>
+        <serializedObject pk="505722" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">566|2664</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">contractState</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.953</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">1</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505723" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">500001|500002</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Product.ID</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.-364.519</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">2</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505724" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">72</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseService.periodDuration:Unit</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.636:1</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">3</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505725" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">500147</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseService.InterestSetting</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.500041</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">4</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505726" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">0</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">LeaseServiceComponents.Precomputed</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.361.12836</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">5</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505727" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">1720</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">isBillableEnumID</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.3117</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">6</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505728" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">2930</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">RentalProfile.rentalCategory</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">97</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.466:50002.477.393.361.-359.783</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">7</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505730" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-1M=21D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">95</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1528</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">8</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505731" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE+1D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">94</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1528</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">9</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505732" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">566</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">Lifecycle.transitionState</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">90</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.2.979.1529</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">10</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505733" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-3M=1D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">startDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">95</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.298</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">11</SEQUENCENR>
+        </serializedObject>
+        <serializedObject pk="505734" linkTable="0" objectId="92">
+          <AGGREGATEENUMID attId="12637" />
+          <RESOLVERPATHDESC />
+          <CONDITIONVALUE attId="314">%CUR_DATE-3M=31D%</CONDITIONVALUE>
+          <FILTERRESOLVERPATHDESC_MLID />
+          <BRACKETSOPEN attId="315">0</BRACKETSOPEN>
+          <SELECTION_ID linkId="167">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <ISRECOMMENDED attId="10385">0</ISRECOMMENDED>
+          <FILTERRESOLVERPATHDESC />
+          <RESOLVERPATHDESC_MLID />
+          <LOGICALOP_ENUMID attId="336">81</LOGICALOP_ENUMID>
+          <FILTERRESOLVERPATH attId="10509" />
+          <DESCRIPTION_TLKEY />
+          <FILTERRESOLVERPATHDESC_TLKEY />
+          <DESCRIPTION attId="312">startDate</DESCRIPTION>
+          <CONDITIONOP_ENUMID attId="337">94</CONDITIONOP_ENUMID>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="313">86.298</RESOLVERPATH>
+          <BRACKETSCLOSE attId="316">0</BRACKETSCLOSE>
+          <OUTERJOINTYPE_ENUMID attId="12708" />
+          <ATTRIBUTETYPE attId="3110" />
+          <CONDITIONITEM_ID attId="311">{pk}</CONDITIONITEM_ID>
+          <SESSION_ID />
+          <SEQUENCENR attId="339">12</SEQUENCENR>
+        </serializedObject>
+      </recordset>
+      <recordset table="displayitem" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT DISPLAYITEM_ID FROM displayitem WHERE SELECTION_ID IN ('501263')</select>
+        <delete>DELETE FROM displayitem WHERE DISPLAYITEM_ID = {pk}</delete>
+        <serializedObject pk="505950" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142">1191</ORDERBY_ENUMID>
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">ID</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.296</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">1</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="505951" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142">1191</ORDERBY_ENUMID>
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">LeaseService.ID</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.466:50002.477.393.624</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">2</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="656223" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142" />
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">Next Bill End Date</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.500341</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">4</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+        <serializedObject pk="656441" linkTable="0" objectId="91">
+          <AGGREGATEENUMID attId="12635" />
+          <RESOLVERPATHDESC />
+          <ORDERBY_ENUMID attId="2142" />
+          <VISIBILITY_ENUMID attId="13014">3134</VISIBILITY_ENUMID>
+          <SELECTION_ID linkId="166">{selection:501263}</SELECTION_ID>
+          <DESCRIPTION_MLID />
+          <RESOLVERPATHDESC_MLID />
+          <DESCRIPTION_TLKEY />
+          <DESCRIPTION attId="309">Calculation date</DESCRIPTION>
+          <TIMESTAMP>2023-12-04 14:53:45.454</TIMESTAMP>
+          <RESOLVERPATH attId="310">86.937</RESOLVERPATH>
+          <SESSION_ID />
+          <DISPLAYITEM_ID attId="308">{pk}</DISPLAYITEM_ID>
+          <SEQUENCENR attId="338">3</SEQUENCENR>
+          <GROUPBY attId="12636">0</GROUPBY>
+        </serializedObject>
+      </recordset>
+      <recordset table="selectionuseraccountrole" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selectionuseraccountrole WHERE SELECTION_ID IN ('501263')</select>
+        <delete>DELETE FROM selectionuseraccountrole WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="SELECTION_ID" />
+      </recordset>
+      <recordset table="selectionsysreprelation" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTION_ID FROM selectionsysreprelation WHERE SELECTION_ID IN ('501263')</select>
+        <delete>DELETE FROM selectionsysreprelation WHERE SELECTION_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="SELECTION_ID" />
+      </recordset>
+      <recordset table="selectionusage" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT SELECTIONUSAGE_ID FROM selectionusage WHERE SELECTION_ID IN (501263) AND USERACCOUNT_ID IS NULL</select>
+        <delete>DELETE FROM selectionusage WHERE SELECTIONUSAGE_ID = {pk}</delete>
+        <serializedObject linkTable="0" objectId="816" />
+      </recordset>
+    </config-id>
+  </config-object>
+</config-export>
+

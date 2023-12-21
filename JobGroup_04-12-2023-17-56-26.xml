@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Miles Version Info:	2022.2 128678T
+	Export database URL:	jdbc:sqlserver://wbsasql2016.sofico.com.au:1433;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=15;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=WBSACFGM3;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;
+	Database Version Info:	Microsoft SQL Server 13
+	Export database schema:	WBSACFGM3
+	Export database:	WBSASQL2016.SOFICO.COM.AU
+	Export timestamp:	12/4/23 5:56 PM
+-->
+<config-export version="2.1" checksum="31F5BC84796AB5CA1816927F3FC0525F0043AFF87D5AF4AEB61D59FA98297400">
+  <export-info>
+    <configuration>107</configuration>
+    <config-object-ids>500115</config-object-ids>
+  </export-info>
+  <config-object name="jobgroup">
+    <config-id id="500115">
+      <recordset table="jobgroup" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT JOBGROUP_ID FROM jobgroup WHERE JOBGROUP_ID = '500115'</select>
+        <delete>DELETE FROM jobgroup WHERE JOBGROUP_ID = {pk}</delete>
+        <serializedObject pk="500115" linkTable="0" objectId="508">
+          <DEPENDENCYBEHAVIOUR_ENUMID attId="12904">3058</DEPENDENCYBEHAVIOUR_ENUMID>
+          <STARTDATE attId="3172" />
+          <TRIGGERTYPE_ENUMID attId="3171">650373</TRIGGERTYPE_ENUMID>
+          <JOBGROUP_ID attId="3168">{pk}</JOBGROUP_ID>
+          <TIMESTAMP>2023-07-03 20:55:55.040</TIMESTAMP>
+          <BATCHPLAN_ID linkId="1287">100005</BATCHPLAN_ID>
+          <ISENABLED attId="3175">1</ISENABLED>
+          <GROUPDEPENDENCY_ENUMID attId="3173">500827</GROUPDEPENDENCY_ENUMID>
+          <SESSION_ID />
+          <SEQUENCENR attId="3170">94</SEQUENCENR>
+          <NAME attId="3169">NPS Billing Generation - Backdated activations - Monthly</NAME>
+          <GROUPWAIT_ENUMID attId="14511">4461</GROUPWAIT_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessor" updateFkOnDelete="1" skipInsert="1" skipDelete="0">
+        <select>SELECT DISTINCT bp.bulkprocessor_id FROM bulkprocessor bp WHERE bp.jobgroup_id IN (500115)</select>
+        <delete>UPDATE bulkprocessor SET JOBGROUP_ID = NULL  WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="500326" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501255</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">344</SYSREPOPERATION_ID>
+          <NAME attId="10523">Calculate Next Bill End Date - Monthly - 1st month backdated activation</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Calculates the Bill Next Due Date on contracts</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2021-12-29 15:19:32.322</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">1</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="500330" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501259</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">344</SYSREPOPERATION_ID>
+          <NAME attId="10523">Calculate Next Bill End Date - Monthly - 2nd month backdated activation</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Calculates the Bill Next Due Date on contracts</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2021-10-08 12:24:45.230</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">5</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="500334" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501262</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">344</SYSREPOPERATION_ID>
+          <NAME attId="10523">Calculate Next Bill End Date - Monthly - 3rd month backdated activation</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Calculates the Bill Next Due Date on contracts</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2021-07-01 12:17:15.375</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">9</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650233" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501256</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2266</SYSREPOPERATION_ID>
+          <NAME attId="10523">Contract revision calculation before billing - Monthly - 1st month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Triggers the revision formulas on NPS contracts which have period duration set to Months. Contracts which will be recalculated are those which have a variable interest rate or contracts which have LSC which are set to precomputed = false.</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-12-04 17:49:46.091</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">2</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650234" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501257</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Advance - 1st month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Advance</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">3</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650235" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501314</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Arrears - 1st month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Arrears</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">4</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650236" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501260</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2266</SYSREPOPERATION_ID>
+          <NAME attId="10523">Contract revision calculation before billing - Monthly - 2nd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Triggers the revision formulas on NPS contracts which have period duration set to Months. Contracts which will be recalculated are those which have a variable interest rate or contracts which have LSC which are set to precomputed = false.</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-12-04 17:50:59.257</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">6</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650237" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501261</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Advance - 2nd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Advance</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">7</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650238" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501258</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Arrears - 2nd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Arrears</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">8</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650239" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501263</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2266</SYSREPOPERATION_ID>
+          <NAME attId="10523">Contract revision calculation before billing - Monthly - 3rd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Triggers the revision formulas on NPS contracts which have period duration set to Months. Contracts which will be recalculated are those which have a variable interest rate or contracts which have LSC which are set to precomputed = false.</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-12-04 17:45:33.906</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">10</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650240" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501264</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Advance - 3rd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Advance</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">11</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+        <serializedObject pk="650241" linkTable="0" updateOnly="1" objectId="457">
+          <JOBGROUP_ID linkId="1288">{jobgroup:500115}</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501265</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Arrears - 3rd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Arrears</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">12</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+    </config-id>
+  </config-object>
+  <config-object name="bulkprocessor">
+    <config-id id="500326">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '500326'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="500326" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501255</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">344</SYSREPOPERATION_ID>
+          <NAME attId="10523">Calculate Next Bill End Date - Monthly - 1st month backdated activation</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Calculates the Bill Next Due Date on contracts</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2021-12-29 15:19:32.322</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">1</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('500326')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="503457" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2021-01-07 13:09:31.662</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:500326}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">3|500997</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">formulaID</NAME>
+        </serializedObject>
+        <serializedObject pk="503458" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2021-01-06 17:17:50.690</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:500326}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">objectIDs</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('500326')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="500330">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '500330'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="500330" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501259</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">344</SYSREPOPERATION_ID>
+          <NAME attId="10523">Calculate Next Bill End Date - Monthly - 2nd month backdated activation</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Calculates the Bill Next Due Date on contracts</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2021-10-08 12:24:45.230</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">5</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('500330')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="503468" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2021-01-07 16:09:21.276</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:500330}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">3|500999</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">formulaID</NAME>
+        </serializedObject>
+        <serializedObject pk="503469" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2021-01-07 15:09:03.331</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:500330}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">objectIDs</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('500330')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="500334">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '500334'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="500334" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501262</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">344</SYSREPOPERATION_ID>
+          <NAME attId="10523">Calculate Next Bill End Date - Monthly - 3rd month backdated activation</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Calculates the Bill Next Due Date on contracts</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2021-07-01 12:17:15.375</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">9</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('500334')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="503479" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2021-01-07 16:19:48.223</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:500334}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">3|501000</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">formulaID</NAME>
+        </serializedObject>
+        <serializedObject pk="503480" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2021-01-07 16:19:14.123</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:500334}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">objectIDs</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('500334')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650233">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650233'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650233" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501256</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2266</SYSREPOPERATION_ID>
+          <NAME attId="10523">Contract revision calculation before billing - Monthly - 1st month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Triggers the revision formulas on NPS contracts which have period duration set to Months. Contracts which will be recalculated are those which have a variable interest rate or contracts which have LSC which are set to precomputed = false.</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-12-04 17:49:46.091</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">2</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650233')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653691" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:48:51.340</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650233}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.466:50002.477.393.624</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">leaseserviceid</NAME>
+        </serializedObject>
+        <serializedObject pk="653692" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-12-04 17:49:46.091</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650233}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">3|</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">changedate</NAME>
+        </serializedObject>
+        <serializedObject pk="653693" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-12-04 17:49:46.091</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650233}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.937</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">calculationdate</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650233')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650234">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650234'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650234" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501257</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Advance - 1st month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Advance</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">3</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650234')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653697" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:50:12.556</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650234}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">contractid</NAME>
+        </serializedObject>
+        <serializedObject pk="653698" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:50:12.556</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650234}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.500341</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billuntildate</NAME>
+        </serializedObject>
+        <serializedObject pk="653699" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:50:12.556</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650234}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">12|1</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billrental</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650234')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650235">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650235'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650235" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501314</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Arrears - 1st month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Arrears</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">4</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650235')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653703" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:51:29.446</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650235}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">contractid</NAME>
+        </serializedObject>
+        <serializedObject pk="653704" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:51:29.446</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650235}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.500341</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billuntildate</NAME>
+        </serializedObject>
+        <serializedObject pk="653705" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:51:29.446</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650235}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">12|1</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billrental</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650235')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650236">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650236'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650236" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501260</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2266</SYSREPOPERATION_ID>
+          <NAME attId="10523">Contract revision calculation before billing - Monthly - 2nd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Triggers the revision formulas on NPS contracts which have period duration set to Months. Contracts which will be recalculated are those which have a variable interest rate or contracts which have LSC which are set to precomputed = false.</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-12-04 17:50:59.257</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">6</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650236')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653956" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-12-04 17:50:59.257</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650236}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.466:50002.477.393.624</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">leaseserviceid</NAME>
+        </serializedObject>
+        <serializedObject pk="653957" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-12-04 17:50:59.257</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650236}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.937</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">calculationdate</NAME>
+        </serializedObject>
+        <serializedObject pk="653958" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-12-04 17:50:59.257</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650236}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">5|</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">changedate</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650236')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650237">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650237'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650237" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501261</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Advance - 2nd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Advance</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">7</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650237')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653714" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:54:31.037</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650237}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">contractid</NAME>
+        </serializedObject>
+        <serializedObject pk="653715" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:54:31.037</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650237}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.500341</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billuntildate</NAME>
+        </serializedObject>
+        <serializedObject pk="653716" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:54:31.037</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650237}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">12|1</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billrental</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650237')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650238">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650238'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650238" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501258</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Arrears - 2nd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Arrears</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">8</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650238')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653720" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:55:41.117</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650238}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">contractid</NAME>
+        </serializedObject>
+        <serializedObject pk="653721" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:55:41.117</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650238}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.500341</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billuntildate</NAME>
+        </serializedObject>
+        <serializedObject pk="653722" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:55:41.117</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650238}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">12|1</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billrental</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650238')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650239">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650239'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650239" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501263</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2266</SYSREPOPERATION_ID>
+          <NAME attId="10523">Contract revision calculation before billing - Monthly - 3rd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Triggers the revision formulas on NPS contracts which have period duration set to Months. Contracts which will be recalculated are those which have a variable interest rate or contracts which have LSC which are set to precomputed = false.</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-12-04 17:45:33.906</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">10</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650239')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653725" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:57:12.577</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650239}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.466:50002.477.393.624</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">leaseserviceid</NAME>
+        </serializedObject>
+        <serializedObject pk="653726" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-12-04 17:45:33.906</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650239}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">3|</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">changedate</NAME>
+        </serializedObject>
+        <serializedObject pk="653727" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-12-04 17:45:33.906</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650239}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.937</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">calculationdate</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650239')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650240">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650240'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650240" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501264</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Advance - 3rd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Advance</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">11</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650240')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653731" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:58:37.218</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650240}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">contractid</NAME>
+        </serializedObject>
+        <serializedObject pk="653732" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:58:37.218</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650240}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.500341</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billuntildate</NAME>
+        </serializedObject>
+        <serializedObject pk="653733" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:58:41.456</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650240}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">12|1</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billrental</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650240')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+    <config-id id="650241">
+      <recordset table="bulkprocessor" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bulkprocessor WHERE BULKPROCESSOR_ID = '650241'</select>
+        <delete>DELETE FROM bulkprocessor WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject pk="650241" linkTable="0" objectId="457">
+          <JOBGROUP_ID linkId="1288">500115</JOBGROUP_ID>
+          <SELECTION_ID linkId="1253">501265</SELECTION_ID>
+          <SYSREPOPERATION_ID linkId="1252">2267</SYSREPOPERATION_ID>
+          <NAME attId="10523">Bill NPS Contracts - Monthly - In Arrears - 3rd month backdated - MRI</NAME>
+          <WORKUNITSIZE attId="15233" />
+          <USERACCOUNT_ID linkId="1262" />
+          <NUMBEROFTHREADS attId="15232" />
+          <SENDMAIL attId="10894">0</SENDMAIL>
+          <DESCRIPTION attId="10524">Creates billing items for contracts which have period duration = months and are invoiced In Arrears</DESCRIPTION>
+          <TRIGGERTYPE_ENUMID attId="10892">100055</TRIGGERTYPE_ENUMID>
+          <PROCESSORTYPE_ENUMID attId="10893">1640</PROCESSORTYPE_ENUMID>
+          <TIMESTAMP>2023-11-20 13:01:36.219</TIMESTAMP>
+          <DISTRIBUTIONSTRATEGY_ENUMID attId="15231" />
+          <BULKPROCESSOR_ID attId="10522">{pk}</BULKPROCESSOR_ID>
+          <NOSTATUSRULES attId="12860">0</NOSTATUSRULES>
+          <SESSION_ID />
+          <SEQUENCENR attId="3163">12</SEQUENCENR>
+          <BEHAVIOURONFAILURE_ENUMID attId="3164">1781</BEHAVIOURONFAILURE_ENUMID>
+        </serializedObject>
+      </recordset>
+      <recordset table="bulkprocessorarg" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSORARG_ID FROM bulkprocessorarg WHERE BULKPROCESSOR_ID IN ('650241')</select>
+        <delete>DELETE FROM bulkprocessorarg WHERE BULKPROCESSORARG_ID = {pk}</delete>
+        <serializedObject pk="653737" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:59:46.225</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650241}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.296</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">contractid</NAME>
+        </serializedObject>
+        <serializedObject pk="653738" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:59:46.225</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1646</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650241}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">86.500341</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billuntildate</NAME>
+        </serializedObject>
+        <serializedObject pk="653739" linkTable="0" objectId="458">
+          <BULKPROCESSORARG_ID attId="10518">{pk}</BULKPROCESSORARG_ID>
+          <TIMESTAMP>2023-11-20 12:59:46.225</TIMESTAMP>
+          <ARGUMENTTYPE_ENUMID attId="10895">1645</ARGUMENTTYPE_ENUMID>
+          <BULKPROCESSOR_ID linkId="1254">{bulkprocessor:650241}</BULKPROCESSOR_ID>
+          <VALUE attId="10520">12|1</VALUE>
+          <CLOBVALUE attId="10896" />
+          <SESSION_ID />
+          <NAME attId="10519">billrental</NAME>
+        </serializedObject>
+      </recordset>
+      <recordset table="bpobjecttemplate" updateFkOnDelete="0" skipInsert="0" skipDelete="0">
+        <select>SELECT DISTINCT BULKPROCESSOR_ID FROM bpobjecttemplate WHERE BULKPROCESSOR_ID IN ('650241')</select>
+        <delete>DELETE FROM bpobjecttemplate WHERE BULKPROCESSOR_ID = {pk}</delete>
+        <serializedObject linkTable="1" pkColumn="BULKPROCESSOR_ID" />
+      </recordset>
+    </config-id>
+  </config-object>
+</config-export>
+
