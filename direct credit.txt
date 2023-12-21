@@ -1,0 +1,21 @@
+Step 1: The Config team must always confirm that the previous day’s ACB Payment Batch was processed successfully and not reversed on Miles before processing ACB for the day.
+
+Step 2: (20) - Run Direct credit payment - Create  
+Step 3a: Send the selection to Daniel's team to validate the data.  
+Step 3b: Send the selection to Edith team to check if today's file don't contain yesterday's transactions.
+
+Step 4: Run sequence number 21 and 22               
+21 - Run Direct credit payment - Export (ACB)                
+22 - Direct credit payment - Post  
+
+Step 5: Verify with Oracle that the Export file has been processed successfully   
+Step 6: If the file is successful - Import the PVR  
+Step 7: Check the HTML logfile to see if the Import is successful or rejected (new step)
+
+Step 8: The ACB Payment Batch Status must be communicated to the EBS team and Business on a daily basis
+
+NB: In the event where the Miles ACB Payment Batch was reversed on Miles an Emergency War Room Session must be called to discuss the implications thereof.
+We must receive confirmation in writing from Finance and EBS before proceed with ACB Payment Batch Processing after an ACB Payment Batch was reversed on Miles.
+
+https://firstrandgroup.sharepoint.com/:x:/r/sites/WSBCorporate/MilesConfigurationGuide/_layouts/15/doc2.aspx?sourcedoc=%7BE7F2A1B6-FC90-444A-87C9-72DB5A062D3F%7D&file=Known%20Miles%20Problems.xlsx&action=default&mobileredirect=true&cid=4ca92fb1-7690-490b-aee1-9d49f749e88d
+
