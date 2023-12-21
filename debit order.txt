@@ -1,0 +1,23 @@
+=> BATCH PLANNER : 100013
+=> START FROM 0 --> 1 and advise Dirk to check the file in (AP direct credit if the anything that needs to be deleted)
+=> once Dirk is happy with the file we run 2 : Direct Debit collection - Export....Sirut must send it/release it  to fintegrate 
+
+=> once Export is done , advise Tiv to email the file to Dirk to check the data.
+=> If Dirk is happy with the export, Tiv must SEND the file (Direct Debit collection - Export) TO FINTERGRATE....send find file to finterate or fnb
+
+=>Tiv must get the confirmation file from Fintegrate before we run 3:Confirmation File Export
+=> once Tiv receive the file from Fintegrate, he must send the hash file to miles before we run 3, send it to miles..
+=> once Tiv done sending hash file to miles, we RUN 3 : confirmation file export....run3 then inform tiv
+=> AFTER 3 VENKATA MOVE FILE TO DONE FOLDER
+=> Tiv must get a file from FNB and send it to miles before we run 4 : WBSA_DirectDebit_LoadReport_Import...waiting for fnb
+
+load report...miles import
+Then we execute load,load imported
+
+
+Purchase invoice approval limits
+
+
+MT940- check file
+
+
